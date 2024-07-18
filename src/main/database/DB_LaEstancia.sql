@@ -129,3 +129,20 @@ call sp_agregarMesa (4, 2, '1.5 mts', '2 mts', 'no');
 call sp_agregarMesa (5, 4, '2 mts', '2 mts', 'no');
 call sp_agregarMesa (6, 6, '2 mts', '1.5 mts', 'si');
 call sp_agregarMesa (7, 2, '1 mts', '1 mts', 'no');
+
+-- --------------------------- Producto ------------------------------------------
+-- ------------------------ Agregar Producto -------------------------------------
+Delimiter $$
+	create procedure sp_agregarProducto (in codigoProducto int, in nombreProducto varchar(50), in ingredientes varchar(100),
+										in  precioProducto decimal(10,2))
+		begin 
+			insert into Producto (codigoProducto, nombreProducto, ingredientes, precioProducto) 
+            		values (codigoProducto, nombreProducto, ingredientes, precioProducto);
+	end $$
+Delimiter ; 
+
+call sp_agregarProducto(12347, 'Parrillada Mixta Estancia', 'Carne de res, pollo, chorizo, costillas de cerdo, cebollas, chimichurri', '195.00');
+call sp_agregarProducto(98765, 'Ensalada Fresca del Huerto', 'Lechuga, espinaca, tomates cherry,pimientos, cebolla morada, aderezo de vinagreta', '66.00');
+call sp_agregarProducto(56789, 'Bife de Chorizo a la Parrilla', 'Bife de chorizo, pimienta, aceite de oliva, hierbas frescas (romero, tomillo), chimichurri', '140.00');
+call sp_agregarProducto(11223, 'Empanadas Criollas', 'Masa de empanada, carne molida, cebolla, pimientos, huevo duro, pimentón, sal, pimienta', '23.00');
+call sp_agregarProducto(44556, 'Tarta de Manzana Casera', 'Masa de tarta, manzanas, azúcar, mantequilla, harina, jugo de limón, huevo(para dorar la masa)', '50.00');

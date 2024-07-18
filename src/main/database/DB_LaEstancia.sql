@@ -146,3 +146,20 @@ call sp_agregarProducto(98765, 'Ensalada Fresca del Huerto', 'Lechuga, espinaca,
 call sp_agregarProducto(56789, 'Bife de Chorizo a la Parrilla', 'Bife de chorizo, pimienta, aceite de oliva, hierbas frescas (romero, tomillo), chimichurri', '140.00');
 call sp_agregarProducto(11223, 'Empanadas Criollas', 'Masa de empanada, carne molida, cebolla, pimientos, huevo duro, pimentón, sal, pimienta', '23.00');
 call sp_agregarProducto(44556, 'Tarta de Manzana Casera', 'Masa de tarta, manzanas, azúcar, mantequilla, harina, jugo de limón, huevo(para dorar la masa)', '50.00');
+
+-- ---------------------------------- Empleado --------------------------------------------
+-- ---------------------------------- Agregar Empleado ------------------------------------
+Delimiter $$
+	create procedure sp_agregarEmpleado (in codigoEmpleado int, in nombresEmpleado varchar(50), in apellidosEmpleado varchar(50), 
+    in puesto varchar(50), in sueldo decimal(10, 2), in turno varchar(15))
+		begin
+			insert into Empleado (codigoEmpleado, nombresEmpleado, apellidosEmpleado, puesto, sueldo, turno)
+            values (codigoEmpleado, nombresEmpleado, apellidosEmpleado, puesto, sueldo, turno);
+	end $$
+Delimiter ;
+
+call sp_agregarEmpleado (3, 'Cristian', 'De leon', 'Gerente', 2500.00, 'Nocturno');
+call sp_agregarEmpleado (4, 'Maria', 'Sumale', 'Asistente', 1500.00, 'Nocturno');
+call sp_agregarEmpleado (5, 'Carlos', 'Gutierrez', 'Asistente', 1500.00, 'Diurno');
+call sp_agregarEmpleado (6, 'Luis', 'Hernandez', 'Cocinero', 2500.00, 'Diurno');
+call sp_agregarEmpleado (7, 'Juan', 'Santos', 'Mesero', 4000.00, 'Nocturno');

@@ -113,3 +113,19 @@ call sp_agregarCliente(987654321, 'Juan', 'Perez', 'Zona 18 Los Olivos', '592978
 call sp_agregarCliente(112233445, 'Helen', 'Reynoso', 'Zona 1 Gerona', '17289865', 'Hreynoso2005@gamil.com');
 call sp_agregarCliente(556677880, 'Alex', 'Hernandez', 'Zona 17 Las Lomas', '58789456', 'Alexh2235@gamil.com');
 call sp_agregarCliente(102938476, 'Steven', 'Montenegro', 'Cayala', '20350000', 'stevenmontenegro21@gamil.com');
+
+-- ---------------------- Mesa -------------------------------------------------
+-- ---------------------- Agregar Mesa ----------------------------------------- 
+Delimiter $$
+	create procedure sp_agregarMesa (in codigoMesa int, in numeroAsientos int, in anchoMesa varchar(50), in largoMesa varchar(50), in ocupada varchar(5))
+		begin
+			insert into Mesa (codigoMesa, numeroAsientos, anchoMesa, largoMesa, ocupada)
+            values (codigoMesa, numeroAsientos, anchoMesa, largoMesa, ocupada);
+	end $$
+Delimiter ;
+
+call sp_agregarMesa (3, 6, '2 mts', '3 mts', 'si');
+call sp_agregarMesa (4, 2, '1.5 mts', '2 mts', 'no');
+call sp_agregarMesa (5, 4, '2 mts', '2 mts', 'no');
+call sp_agregarMesa (6, 6, '2 mts', '1.5 mts', 'si');
+call sp_agregarMesa (7, 2, '1 mts', '1 mts', 'no');

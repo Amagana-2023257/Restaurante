@@ -179,3 +179,18 @@ call sp_agregarProveedor(123456789, 'Juan', 'Hernandez', '54546767', 'juan@gmail
 call sp_agregarProveedor(987654321, 'Jose', 'Romero', '78987890', 'jose@gmail.com');
 call sp_agregarProveedor(555555555, 'Luis', 'Garcia', '77799999', 'luis@gmail.com');
 call sp_agregarProveedor(999999999, 'Rodrigo', 'De Paul', '12223344', 'rodri@gmail.com');
+
+-- ---------------------- Utencilio --------------------------------
+-- ---------------------- Agregar Utencilio ------------------------
+Delimiter $$
+	create procedure sp_agregarUtencilio (in codigoUtencilio int, in nombreUtencilio varchar(50), in material varchar(50), in color varchar(50))
+		begin
+			insert into Utencilio (codigoUtencilio, nombreUtencilio, material, color)
+            values (codigoUtencilio, nombreUtencilio, material, color);
+	end $$
+Delimiter ;
+
+call sp_agregarUtencilio(1, 'Cuchara', 'Acero inoxidable', 'Plateado');
+call sp_agregarUtencilio(2, 'Tenedor', 'Plástico', 'Blanco');
+call sp_agregarUtencilio(3, 'Cuchillo', 'Acero', 'Negro');
+call sp_agregarUtencilio(4, 'Espátula', 'Silicona', 'Rojo');

@@ -163,3 +163,19 @@ call sp_agregarEmpleado (4, 'Maria', 'Sumale', 'Asistente', 1500.00, 'Nocturno')
 call sp_agregarEmpleado (5, 'Carlos', 'Gutierrez', 'Asistente', 1500.00, 'Diurno');
 call sp_agregarEmpleado (6, 'Luis', 'Hernandez', 'Cocinero', 2500.00, 'Diurno');
 call sp_agregarEmpleado (7, 'Juan', 'Santos', 'Mesero', 4000.00, 'Nocturno');
+
+-- ------------------ Proveedor ---------------------------------
+-- ------------------ Agregar Proveedor -------------------------
+Delimiter $$
+	create procedure sp_agregarProveedor (in nitProveedor int, in nombreProveedor varchar(50), in apellidoProveedor varchar(50), 
+    in telefonoProveedor varchar(50), in correoProveedor varchar(50))
+		begin
+			insert into Proveedor (nitProveedor, nombreProveedor, apellidoProveedor, telefonoProveedor, correoProveedor)
+			values (nitProveedor, nombreProveedor, apellidoProveedor, telefonoProveedor, correoProveedor);
+	end $$
+Delimiter ;
+
+call sp_agregarProveedor(123456789, 'Juan', 'Hernandez', '54546767', 'juan@gmail.com');
+call sp_agregarProveedor(987654321, 'Jose', 'Romero', '78987890', 'jose@gmail.com');
+call sp_agregarProveedor(555555555, 'Luis', 'Garcia', '77799999', 'luis@gmail.com');
+call sp_agregarProveedor(999999999, 'Rodrigo', 'De Paul', '12223344', 'rodri@gmail.com');

@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.josesanchez</groupId>
-    <artifactId>proyect0</artifactId>
+    <artifactId>proyect</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
-    <name>proyect0-1.0.0</name>
+    <name>proyect-1.0.0</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakartaee>10.0.0</jakartaee>

@@ -95,3 +95,21 @@ create table DetalleFactura(
 	constraint FK_Orden_codigoOrdenDetalleF foreign key (codigoOrden)
 		references Orden (codigoOrden)
 );
+
+-- ----------------- Procesos Almacenados -----------------------
+-- --------------------------Cliente---------------------------------------------
+-- --------------------- Agregar Clientes ---------------------------------------
+Delimiter $$
+	create procedure sp_agregarCliente (in nit int, in nombreCliente varchar(50), in apellidoCliente varchar(50),
+										in direccionCliente varchar(50), in telefonoCliente varchar(10), in correoCliente varchar(50))
+		begin 
+			insert into Cliente (nit, nombreCliente, apellidoCliente, direccionCliente, telefonoCliente, correoCliente) 
+            		values (nit, nombreCliente, apellidoCliente, direccionCliente, telefonoCliente, correoCliente);
+	end $$
+Delimiter ; 
+
+call sp_agregarCliente(123456789, 'Bryan', 'Alvarez', 'Zona 18 paraiso II', '36101639', 'balvarez@gamil.com');
+call sp_agregarCliente(987654321, 'Juan', 'Perez', 'Zona 18 Los Olivos', '59297849', 'juanPerez17@gamil.com');
+call sp_agregarCliente(112233445, 'Helen', 'Reynoso', 'Zona 1 Gerona', '17289865', 'Hreynoso2005@gamil.com');
+call sp_agregarCliente(556677880, 'Alex', 'Hernandez', 'Zona 17 Las Lomas', '58789456', 'Alexh2235@gamil.com');
+call sp_agregarCliente(102938476, 'Steven', 'Montenegro', 'Cayala', '20350000', 'stevenmontenegro21@gamil.com');

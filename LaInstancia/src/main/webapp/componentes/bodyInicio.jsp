@@ -51,7 +51,7 @@
                     para Mesero-->
                     <li><a href="mesero.jsp"><i class="fas fa-cog"></i> Nueva orden</a></li>
                     <li><a href="orden.jsp"><i class="fas fa-cog"></i> Editar</a></li>
-                    <li><a href="generar-orden.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
+                    <li><a href="carritoPrueva.jsp"><i class="fas fa-cog"></i> Cuenta</a></li>
                     <li><a href="opcion4.jsp"><i class="fas fa-cog"></i> Actualizar</a></li>
                 </ul>
             </li>

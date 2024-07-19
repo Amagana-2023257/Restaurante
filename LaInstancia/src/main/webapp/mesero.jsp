@@ -8,6 +8,7 @@ y cierra con bodiFinal-->
    
  <div class="content">
     <h2>Productos</h2>
+    <i class="bi bi-cart"></i>
     <div class="product-grid">
         <div class="product-card">
             <img src="assets/imagenes/productos/ramen.jpg" alt="Shio Ramen">

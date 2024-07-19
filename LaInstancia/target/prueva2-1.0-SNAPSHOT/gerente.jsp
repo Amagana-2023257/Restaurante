@@ -11,19 +11,20 @@ y cierra con bodiFinal-->
         /*Este es el estilo que se le aplica a la tabla para ada`ptarla a la pantalla*/
         .custom-position {
             position: absolute;
-            top: 35px; /* Ajusta este valor según sea necesario */
+            top: 50px; /* Ajusta este valor según sea necesario */
             left: 300px; /* Ajusta este valor según sea necesario */
         }
         
         .custom-position2 {
             position: absolute;
-            top: 600px; /* Ajusta este valor según sea necesario */
+            top: 400px; /* Ajusta este valor según sea necesario */
             left: 300px; /* Ajusta este valor según sea necesario */
         }
         
         .custom-zice {
             width: 700px; /* Ajusta este valor según sea necesario */
             height: 800px; /* Ajusta este valor según sea necesario */
+            
         }
     </style>
 </head>
@@ -35,62 +36,60 @@ y cierra con bodiFinal-->
         <ul>
             <!-- Opcion donde llaman al diseño de Gerente -->
             <li class="menu"><a href="#"><i class="fas fa-user"></i> Gerente</a>
-                <li class="menu"><a href="#"><i class="fas fa-user"></i> Meseros-Mesas</a>
-                </li>
+                <p class="text-center">Meseros-Mesas</p>
+                <ul class="submenu">
+                <li><a href="index.jsp"><i class="fas fa-cog"></i> Regresar</a></li>
+                </ul>
             </li>
-        
         </ul>
         
     </div>
-    
-    <div class="position-relative" style="height: 100px;"> <!-- Ajusta la altura según sea necesario -->
-        <div class="custom-position">
-             <div class="custom-zice">
-                <table class="table table-striped table-bordered">
-                    <h2 class="modal-title">Meseros</h2>
-                    <thead class="table-dark">
-                              <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">Nombre    </th>
-                              <th scope="col">Apellido  </th>
-                              <th scope="col">Mesas   </th>
-                            </tr>
+    <div class="table-responsive custom-position" style="width: 800px; max-height: 300px; overflow-y: scroll;">
+                 <div class="custom-zice">
+                    <table class="table table-striped table-bordered">
+                        <h2 class="modal-title">Meseros</h2>
+                        <thead class="table-dark">
+                                  <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Nombre    </th>
+                                  <th scope="col">Apellido  </th>
+                                  <th scope="col">Mesas   </th>
+                                </tr>
 
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Lara</td>
-                        <td>Smith</td>
-                        <td>15-17</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Ethan </td>
-                        <td>Johnson</td>
-                        <td>11-13</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Sophia</td>
-                        <td>Brown</td>
-                        <td>8-10</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Mason</td>
-                        <td>Davis</td>
-                        <td>5-7</td>
-                      </tr>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Lara</td>
+                            <td>Smith</td>
+                            <td>15-17</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Ethan </td>
+                            <td>Johnson</td>
+                            <td>11-13</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Sophia</td>
+                            <td>Brown</td>
+                            <td>8-10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mason</td>
+                            <td>Davis</td>
+                            <td>5-7</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-        <div class="position-relative" style="height: 100px;"> <!-- Ajusta la altura según sea necesario -->
-        <div class="custom-position2">
+        <div class="table-responsive custom-position2" style="width: 800px; max-height: 300px; overflow-y: scroll;">
              <div class="custom-zice">
                 <table class="table table-striped table-bordered">
-                    <h2 class="modal-title">Meseros</h2>
+                    <h2 class="modal-title">Mesas</h2>
                     <thead class="table-dark">
                               <tr>
                               <th scope="col">#</th>
@@ -203,9 +202,6 @@ y cierra con bodiFinal-->
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-
-    
+        </div>    
 <%@ include file="componentes/bodyFinal.jsp"%>
 

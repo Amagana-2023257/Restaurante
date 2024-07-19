@@ -34,7 +34,7 @@
             <li class="menu"><a href="#"><i class="fas fa-utensils"></i> Cocina</a>
                 <ul class="submenu">
                     <!-- se llamara a la vista de que se seleccione -->
-                    <li><a href="cocina.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
+                    <li><a href="agregar-.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
                     <li><a href="opcion3.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
                     <li><a href="opcion3.jsp"><i class="fas fa-cog"></i> Editar</a></li>
                     <li><a href="opcion3.jsp"><i class="fas fa-cog"></i> Actualizar</a></li>
@@ -49,9 +49,9 @@
                     de mesero en Agregar se dirija una vista de un jsp llamada 
                     mesero.jsp esto lo puedo cambiar mediante la vista que quiero
                     para Mesero-->
-                    <li><a href="mesero.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
-                    <li><a href="opcion4.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
-                    <li><a href="opcion4.jsp"><i class="fas fa-cog"></i> Editar</a></li>
+                    <li><a href="mesero.jsp"><i class="fas fa-cog"></i> Nueva orden</a></li>
+                    <li><a href="orden.jsp"><i class="fas fa-cog"></i> Editar</a></li>
+                    <li><a href="generar-orden.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
                     <li><a href="opcion4.jsp"><i class="fas fa-cog"></i> Actualizar</a></li>
                 </ul>
             </li>

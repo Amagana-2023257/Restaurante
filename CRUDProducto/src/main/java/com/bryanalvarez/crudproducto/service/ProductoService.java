@@ -1,7 +1,7 @@
 
 package com.bryanalvarez.crudproducto.service;
 
-import com.bryanalvarez.crudproducto.model.Cliente;
+import com.bryanalvarez.crudproducto.model.Producto;
 import com.bryanalvarez.crudproducto.util.JpaUtil;
 import jakarta.persistence.EntityManager;
 import java.util.List;
@@ -10,35 +10,35 @@ import java.util.List;
  *
  * @author USUARIO
  */
-public class ClienteService implements IClienteService{
+public class ProductoService implements IProductoService{
     private EntityManager em;
     
-    public void ClienteService(){
+    public ProductoService(){
         this.em = JpaUtil.getEntityManager();
     }
 
     @Override
-    public void crearCliente(Cliente cliente) {
+    public void crearProducto(Producto producto) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public List<Cliente> listarCliente() {
+    public List<Producto> listarProdcutos() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public Cliente buscarCliente(int nit) {
+    public Producto buscarProducto(int codigoProducto) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void editarCliente(Cliente cliente) {
+    public void editarProducto(Producto producto) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void eliminarCliente(int nit) {
+    public void eliminarProducto(int codigoProducto) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     } 
 }

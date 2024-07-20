@@ -34,10 +34,10 @@
             <li class="menu"><a href="#"><i class="fas fa-utensils"></i> Cocina</a>
                 <ul class="submenu">
                     <!-- se llamara a la vista de que se seleccione -->
-                    <li><a href="cocina.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
-                    <li><a href="opcion3.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
-                    <li><a href="opcion3.jsp"><i class="fas fa-cog"></i> Editar</a></li>
-                    <li><a href="opcion3.jsp"><i class="fas fa-cog"></i> Actualizar</a></li>
+                    <li><a href="Agregar-Cocina.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
+                    <li><a href="Eliminar-Cocina.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
+                    <li><a href="Editar-Cocina.jsp"><i class="fas fa-cog"></i> Editar</a></li>
+                    <li><a href="Actualizar-Cocina.jsp"><i class="fas fa-cog"></i> Actualizar</a></li>
                 </ul>
             </li>
             

@@ -4,6 +4,8 @@ package com.bryanalvarez.crudproducto.service;
 import com.bryanalvarez.crudproducto.model.Producto;
 import com.bryanalvarez.crudproducto.util.JpaUtil;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.TypedQuery;
 import java.util.List;
 
 /**
@@ -19,26 +21,40 @@ public class ProductoService implements IProductoService{
 
     @Override
     public void crearProducto(Producto producto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EntityTransaction transaction = em.getTransaction();
+        try{
+            transaction.begin();
+            em.persist(producto);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override
     public List<Producto> listarProdcutos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        TypedQuery<Producto> query = em.createQuery("SELECT p FROM Producto p", Producto.class);
+        return query.getResultList();
     }
 
     @Override
     public Producto buscarProducto(int codigoProducto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return em.find(Producto.class, codigoProducto);
     }
 
     @Override
     public void editarProducto(Producto producto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        em.merge(producto);
     }
 
     @Override
     public void eliminarProducto(int codigoProducto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Producto producto = buscarProducto(codigoProducto);
+            if(producto != null){
+                em.remove(producto);
+        }
     } 
 }

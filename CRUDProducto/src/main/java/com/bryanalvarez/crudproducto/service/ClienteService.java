@@ -4,6 +4,8 @@ package com.bryanalvarez.crudproducto.service;
 import com.bryanalvarez.crudproducto.model.Cliente;
 import com.bryanalvarez.crudproducto.util.JpaUtil;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.TypedQuery;
 import java.util.List;
 
 /**
@@ -19,26 +21,40 @@ public class ClienteService implements IClienteService{
 
     @Override
     public void crearCliente(Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EntityTransaction transaction = em.getTransaction();
+        try{
+            transaction.begin();
+            em.persist(cliente);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override
     public List<Cliente> listarCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        TypedQuery<Cliente> query = em.createQuery("SELECT c FROM Cliente c", Cliente.class);
+        return query.getResultList();
     }
 
     @Override
     public Cliente buscarCliente(int nit) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return em.find(Cliente.class, nit);
     }
 
     @Override
     public void editarCliente(Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        em.merge(cliente);
     }
 
     @Override
     public void eliminarCliente(int nit) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+      Cliente cliente = buscarCliente(nit);
+            if(cliente != null){
+                em.remove(cliente);
+        }
     } 
 }

@@ -1,2 +1,7 @@
+com\josesanchez\proyectoto\service\GerenteService.class
 com\josesanchez\proyectoto\JakartaRestConfiguration.class
+com\josesanchez\proyectoto\servlet\GerenteServlet.class
+com\josesanchez\proyectoto\model\Gerente.class
+com\josesanchez\proyectoto\service\IGerenteService.class
 com\josesanchez\proyectoto\resources\JakartaEE10Resource.class
+com\josesanchez\proyectoto\util\JpaUtil.class

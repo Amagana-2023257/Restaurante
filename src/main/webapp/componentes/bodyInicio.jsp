@@ -13,7 +13,7 @@
                 <ul class="submenu">
                       <!--  opcion1.jsp: se llamara a la vista de que se seleccione -->
                     <li><a href="recepcion.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
-                    <li><a href="eliminar.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
+                    <li><a href="agregarResepcion.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
                     
                 </ul>
             </li>

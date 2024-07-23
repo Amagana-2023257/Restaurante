@@ -5,33 +5,33 @@ y cierra con bodiFinal-->
 <%@ include file="componentes/header.jsp"%>
 <%@ include file="componentes/bodyInicio.jsp"%>
   <head>
-    <!-- Asegúrate de incluir Bootstrap CSS -->
+    <!-- Se incluye Boostrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         /*Estos son los estilos que se les aplicaran a las tablas para adaptarlas a la pantalla*/
         /*Estos estilos son para la posicion de las tablas*/
         .custom-position {
             position: absolute;
-            top: 50px; 
-            left: 300px;
+            top: 50px; /* Ubicaion Vertical*/
+            left: 300px; /* Ubicacion Horizontal */
         }
         
         .custom-position2 {
             position: absolute;
-            top: 400px; 
-            left: 300px; 
+            top: 400px; /* Ubicaion Vertical*/
+            left: 300px;  /* Ubicacion Horizontal */
         }
         
         .custom-position3 {
             position: absolute;
-            top: 800px; 
-            left: 300px; 
+            top: 800px; /* Ubicaion Vertical*/
+            left: 300px;  /* Ubicacion Horizontal */
         }
         
         /*Este estilo es para modificar el tamaño de las tablas*/
         .custom-zice {
-            width: 700px; 
-            height: 800px; 
+            width: 700px; /*Ancho*/
+            height: 800px; /*Largo*/
             
         }
         
@@ -43,25 +43,36 @@ y cierra con bodiFinal-->
             <img src="assets/imagenes/Logos/logo.png" alt="Logo">
         </div>
         <ul>
-            <!-- Opcion donde llaman al diseño de Gerente -->
+            <!-- Opcion para desplrgar el Submenu -->
             <li class="menu"><a href="#"><i class="fas fa-user"></i> Gerente</a>
-                <p class="text-center">Orden</p>
+                <p class="text-center">Mesas-Meseros</p>
+                <!-- Se despliega el Submenu con las demas opciondes del Gerente-->
                 <ul class="submenu">
+                    <!-- Opcion donde llaman los demas diseños de Gerente -->
                     <li><a href="agregar.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
                     <li><a href="eliminar.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
                     <li><a href="editar.jsp"><i class="fas fa-cog"></i> Editar</a></li>
                     <li><a href="actualizar.jsp"><i class="fas fa-cog"></i> Actualizar</a></li>
+                    <!-- Opcion para Regresar al la pagina principal -->
                     <li><a href="index.jsp"><i class="fas fa-home"></i> Inicio</a></li>
                 </ul>
             </li>
         </ul>
     </div>
-
+            <!--  Se crea y se le asigna la posicion de la tabla y se le 
+            implementa un scroll para desplazar verticalmente la tabla -->
             <div class="table-responsive custom-position" style="width: 800px; max-height: 300px; overflow-y: scroll;">
+                <!--  Se modifica el tamaño de la tabla -->
                 <div class="custom-zice">
+                    <!--  Se le asigna el tipo de tabla y se le da diseño a los bordes de la tabla -->
                    <table class="table table-striped table-bordered border-success">
+                       <!-- Se le da un titulo a la tabla -->
                        <h2 class="modal-title">Meseros-Mesas</h2>
+                       <!-- Se le da estilo a la tabla -->
                        <thead class="table-dark">
+                           <!-- Se le dan titulos a las columnas para que el 
+                                usuario pueda identificar que dato es el que 
+                                mostrara la tabla -->
                                  <tr>
                                  <th scope="col">ID</th>
                                  <th scope="col">Nombre    </th>
@@ -71,6 +82,7 @@ y cierra con bodiFinal-->
 
                        </thead>
                        <tbody>
+                        <!-- Datos que se mostraran en la tabla -->
                          <tr>
                            <td>1</td>
                            <td>Lara</td>
@@ -99,11 +111,21 @@ y cierra con bodiFinal-->
                    </table>
                </div>
             </div>
+            
+        <!--  Se crea y se le asigna la posicion de la tabla y se le 
+        implementa un scroll para desplazar verticalmente la tabla -->        
         <div class="table-responsive custom-position2" style="width: 800px; max-height: 300px; overflow-y: scroll;">
-             <div class="custom-zice">
+            <!--  Se modifica el tamaño de la tabla -->
+            <div class="custom-zice">
+                <!--  Se le da diseño a los bordes de la tabla -->
                 <table class="table table-striped table-bordered border-success">
+                    <!-- Se le da un titulo a la tabla -->
                     <h2 class="modal-title">Mesas-Estado</h2>
+                    <!-- Se le da estilo a la tabla -->
                     <thead class="table-dark">
+                            <!-- Se le dan titulos a las columnas para que el 
+                                usuario pueda identificar que dato es el que 
+                                mostrara la tabla -->
                             <tr>
                               <th scope="col">#</th>
                               <th scope="col">Cantidad de personas</th>
@@ -113,6 +135,7 @@ y cierra con bodiFinal-->
 
                     </thead>
                     <tbody>
+                      <!-- Datos que se mostraran en la tabla -->
                       <tr>
                         <th scope="row">1</th>
                         <td>4</td>
@@ -237,19 +260,28 @@ y cierra con bodiFinal-->
                 </table>
             </div>
         </div>
-        
+        <!--  Se crea y se le asigna la posicion de la tabla y se le 
+        implementa un scroll para desplazar verticalmente la tabla -->
         <div class="table-responsive custom-position3" style="width: 800px; max-height: 300px; overflow-y: scroll;">
-             <div class="custom-zice">
+            <!--  Se modifica el tamaño de la tabla -->
+            <div class="custom-zice">
+                <!--  Se le da diseño a los bordes de la tabla -->
                 <table class="table table-striped table-bordered border-success">
-                    <h2 class="modal-title">Pedidos-Mesas</h2>
+                    <!-- Se le da un titulo a la tabla -->
+                    <h2 class="modal-title">Pedidos-Mesas</h2>                    
+                    <!-- Se le da estilo a la tabla -->
                     <thead class="table-dark">
                             <tr>
+                              <!-- Se le dan titulos a las columnas para que el 
+                                usuario pueda identificar que dato es el que 
+                                mostrara la tabla -->
                               <th scope="col">Pedido</th>
                               <th scope="col">No. de Mesa</th>
                             </tr>
 
                     </thead>
                     <tbody>
+                      <!-- Datos que se mostraran en la tabla -->
                       <tr>
                         <td>Pedido1</td>
                         <td>#1</td>                      

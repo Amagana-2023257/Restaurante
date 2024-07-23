@@ -19,11 +19,11 @@
                 </ul>
             </li>
             
-            <!-- Opcion donde llaman al diseño de Gerente -->
+            <!-- Opcion donde se desplegara el submenu del Gerente-->
             <li class="menu"><a href="#"><i class="fas fa-user"></i> Gerente</a>
                 <ul class="submenu">
-                    <!--  opcion2.jsp: se llamara a la vista de que se seleccione -->
-                    <li><a href="gerente.jsp"><i class="fas fa-cog"></i>Orden</a></li>
+                    <!-- Se despliega el Submenu con las demas opciondes del Gerente-->
+                    <li><a href="gerente.jsp"><i class="fas fa-cog"></i>Mesas-Meseros</a></li>
                     <li><a href="agregar.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
                     <li><a href="eliminar.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
                     <li><a href="editar.jsp"><i class="fas fa-cog"></i> Editar</a></li>

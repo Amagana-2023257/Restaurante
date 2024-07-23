@@ -23,9 +23,10 @@
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
 							</div>
 							<div class="col-xs-6">
-								<button type="button" class="btn btn-primary btn-sm btn-block">
-									<span class="glyphicon glyphicon-share-alt"></span> Continue shopping
-								</button>
+								<body>
+                                                                    <button type="button" class="btn btn-primary btn-sm btn-block" onclick="location.href='mesero.jsp'">
+                                                                        <span class="glyphicon glyphicon-share-alt"></span> Agregar Producto
+                                                                    </button>
 							</div>
 						</div>
 					</div>
@@ -93,7 +94,7 @@
 						</div>
 						<div class="col-xs-3">
 							<button type="button" class="btn btn-success btn-block">
-								Checkout
+								Completar
 							</button>
 						</div>
 					</div>

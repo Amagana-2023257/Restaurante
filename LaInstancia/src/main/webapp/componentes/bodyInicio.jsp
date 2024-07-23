@@ -1,6 +1,10 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%-- En esta parte es lo que muestra la pantalla como la barra de navegacion,
+     tambien es la parte 2/3
+--%>
 <body>
     <div class="sidebar" id="sidebar">
         <div class="logo">

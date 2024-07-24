@@ -63,7 +63,7 @@
                     
                     <!-- Tabla Mesas Ocupadas -->
                     <div class="container mt-4 ml-3 " style="position: relative; left: 100px; top: 70px;">
-                        <h4>Mesas Ocupadas</h4>
+                        <h4 >Mesas Ocupadas</h4>
                         <div class="table-responsivetable" style="max-height: 200px; overflow-y: scroll;">
                             <table class="table table-striped">
                                 <thead>

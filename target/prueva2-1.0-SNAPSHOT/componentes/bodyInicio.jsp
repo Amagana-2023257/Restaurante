@@ -12,8 +12,8 @@
             <li class="menu"><a href="#"><i class="fas fa-home"></i> Recepcion</a>
                 <ul class="submenu">
                       <!--  opcion1.jsp: se llamara a la vista de que se seleccione -->
-                    <li><a href="recepcion.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
-                    <li><a href="agregarResepcion.jsp"><i class="fas fa-cog"></i> Eliminar</a></li>
+                    <li><a href="recepcion.jsp"><i class="fas fa-cog"></i> Ver Recepciones</a></li>
+                    <li><a href="agregarResepcion.jsp"><i class="fas fa-cog"></i> Agregar</a></li>
                     
                 </ul>
             </li>

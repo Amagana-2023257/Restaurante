@@ -5,6 +5,7 @@
 <%@ include file="componentes/bodyInicio.jsp"%>
 
 <!-- Aquí Pondremos las vistas específicas para las Opciones de Recepción -->
+
 <div class="" style="position: relative; left: 80px;">
         <div class="container-fluid" style="position: relative; left: 90px;">
             <div class="row" style="position: relative; left: 90px;">
@@ -62,7 +63,7 @@
                     
                     <!-- Tabla Mesas Ocupadas -->
                     <div class="container mt-4 ml-3 " style="position: relative; left: 100px; top: 70px;">
-                        <h4>Mesas Ocupadas</h4>
+                        <h4 >Mesas Ocupadas</h4>
                         <div class="table-responsivetable" style="max-height: 200px; overflow-y: scroll;">
                             <table class="table table-striped">
                                 <thead>
@@ -158,63 +159,7 @@
                         </div>
                     </div>
 
-                    <!-- Formulario para cargar una mesa ocupada -->
-                    <div class="container mt-5 ml-3">
-                        <div >
-                            <div class="card-body" style="position: relative; left: 700px; top: -300px;">
-                                <h5 class="card-title">Mesas Ocupadas</h5>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="nameInput">Nombre</label>
-                                        <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="timeInput">Hora</label>
-                                        <input type="time" class="form-control" id="timeInput">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="numberInput">Número de personas</label>
-                                        <input type="number" class="form-control" id="numberInput" placeholder="Cantidad de personas">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">Agregar</button>
-                                </form>
-                            </div>
-                        </div>
-     
-                    </div>
-
-                    <!-- Formulario Reservaciones -->
-                    <div class="container mt-5 ml-3"style="position: relative; left: 90px; top: -730px;">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="nameInput">Reservaciones</label>
-                                        <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="timeInput">Hora</label>
-                                        <input type="time" class="form-control" id="timeInput">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="dateInput">Fecha</label>
-                                        <input type="date" class="form-control" id="dateInput">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="numberInput">Número de personas</label>
-                                        <input type="number" class="form-control" id="numberInput" placeholder="Cantidad de personas">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">Agregar</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>  
-    </div>
+  
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

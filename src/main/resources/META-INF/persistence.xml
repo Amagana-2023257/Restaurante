@@ -4,7 +4,7 @@
 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 <! reemplazar con tus entendidas -->
  
-        <class>com.josesanchez.protect0.model.Gerente</class>
+        <class>com.josesanchez.protectoto.model.Gerente</class>
  <properties>
         <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
         <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"/>

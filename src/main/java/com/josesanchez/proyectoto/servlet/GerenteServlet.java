@@ -29,7 +29,7 @@ public class GerenteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Gerente> gerente = gerenteService.listarGerente();
         gerente.forEach(p -> System.out.println(p));
-        req.setAttribute("productos", gerente);
+        req.setAttribute("gerente", gerente);
         req.getRequestDispatcher("/lista-gerente/lista-gerente.jsp").forward(req, resp);
     }
 

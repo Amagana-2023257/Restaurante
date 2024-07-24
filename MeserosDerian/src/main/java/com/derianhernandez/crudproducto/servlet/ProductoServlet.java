@@ -25,6 +25,7 @@ public class ProductoServlet extends HttpServlet {
         this.productoService = new ProductoService();
     }
 
+    //Sobre carga del metodo doGet para listar los productos
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Producto> productos = productoService.listarProductos();
@@ -33,6 +34,7 @@ public class ProductoServlet extends HttpServlet {
         req.getRequestDispatcher("/lista-producto/lista-producto.jsp").forward(req, resp);
     }
 
+    //Metodo de creacion de producto para asignarlo en la EntityManager
     private void crearProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int codigo = Integer.parseInt(request.getParameter("codigoProducto"));
         String nombre = request.getParameter("nombreProducto");
@@ -46,6 +48,7 @@ public class ProductoServlet extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/");
     }
 
+    //Post en la base
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pathInfo = request.getPathInfo();
@@ -57,6 +60,7 @@ public class ProductoServlet extends HttpServlet {
         }
     }
 
+    //Metodo de edicion de productos
     private void editarProducto(int codigoProducto, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Producto producto = productoService.buscarProducto(codigoProducto);
         if (producto != null) {
@@ -80,6 +84,7 @@ public class ProductoServlet extends HttpServlet {
         }
     }
     
+    //Put en la base
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String pathInfo = req.getPathInfo();
@@ -97,6 +102,7 @@ public class ProductoServlet extends HttpServlet {
         }
     }
     
+    //Metodo de eliminacion de Productos
      private void eliminarProducto(int codigoProducto, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Producto producto = productoService.buscarProducto(codigoProducto);
         if (producto != null) {
@@ -107,6 +113,7 @@ public class ProductoServlet extends HttpServlet {
         }
     }
      
+     //Delete de la base
      @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String pathInfo = req.getPathInfo();

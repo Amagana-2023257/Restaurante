@@ -3,7 +3,7 @@
     
     <persistence-unit name="DB_LaEstancia" transaction-type="RESOURCE_LOCAL">
 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<! reemplazar con tus entendidas -->
+<!-- reemplazar con tus entendidas -->
  
         <class>com.bryanalvarez.crudproducto.model.Producto</class>
         <class>com.bryanalvarez.crudproducto.model.Cliente</class>
@@ -11,7 +11,7 @@
         <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
         <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"/>
         <property name="jakarta.persistence.jdbc.user" value="root"/>
-        <property name="jakarta.persistence.jdbc.password" value="admi"/>
+        <property name="jakarta.persistence.jdbc.password" value="Samedirection14"/>
         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
         <property name="hibernate.hbm2ddl.auto" value="create"/>
         <property name="hibernate.show_sql" value="true"/>

@@ -1,0 +1,9 @@
+com\derianhernandez\crudproducto\servlet\ProductoServlet.class
+com\bryanalvarez\crudproducto\service\IProductoService.class
+com\bryanalvarez\crudproducto\JakartaRestConfiguration.class
+com\bryanalvarez\crudproducto\model\Producto.class
+com\bryanalvarez\crudproducto\service\ProductoService.class
+com\bryanalvarez\crudproducto\util\JpaUtil.class
+com\bryanalvarez\crudproducto\model\Cliente.class
+com\bryanalvarez\crudproducto\service\IClienteService.class
+com\bryanalvarez\crudproducto\service\ClienteService.class

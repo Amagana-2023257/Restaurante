@@ -1,4 +1,4 @@
-package com.derianhernandez.crudproducto.servlet;
+/*package com.derianhernandez.crudproducto.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -73,7 +73,7 @@ public class ClienteServlet extends HttpServlet {
             String correoCliente = req.getParameter("correoCliente");
             
             cliente.setNit(nit);
-            cliente.setNombreCliente(nombreCliente);
+            cliente.setNombreCleinte(nombre);
             cliente.setApellidoCliente(apellido);
             cliente.setDireccionCliente(direccionCliente);
             cliente.setTelefonoCliente(telefonoCliente);
@@ -133,3 +133,4 @@ public class ClienteServlet extends HttpServlet {
         }
     }
 }
+*/

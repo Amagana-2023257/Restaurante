@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/CRUDProducto"/>
-
+<Context path="/CRUDProducto">
 <Resource
     auth="Container"
     driverClassName="com.mysql.cj.jdbc.Driver"
@@ -8,7 +7,7 @@
     maxTotal="100"
     name="jdbc/DB_LaEstancia"
     username="root"
-    password="admi"
+    password="Samedirection14"
     type="javax.sql.DataSource"
     url="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"
 />

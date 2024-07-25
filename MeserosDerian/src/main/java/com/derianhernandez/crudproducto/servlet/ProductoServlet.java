@@ -31,7 +31,7 @@ public class ProductoServlet extends HttpServlet {
         List<Producto> productos = productoService.listarProductos();
         productos.forEach(p -> System.out.println(p));
         req.setAttribute("productos", productos);
-        req.getRequestDispatcher("/mesero/mesero.jsp").forward(req, resp);
+        req.getRequestDispatcher("mesero.jsp").forward(req, resp);
     }
 
     //Metodo de creacion de producto para asignarlo en la EntityManager
@@ -39,8 +39,9 @@ public class ProductoServlet extends HttpServlet {
         int codigo = Integer.parseInt(request.getParameter("codigoProducto"));
         String nombre = request.getParameter("nombreProducto");
         String ingredientes = request.getParameter("ingredientes");
-        String imagen = request.getParameter("imagenProducto");
         double precio = Double.parseDouble(request.getParameter("precioProducto"));
+        String imagen = request.getParameter("imagenProducto");
+        
 
         Producto producto = new Producto(codigo, nombre, ingredientes, precio, imagen);
         productoService.crearProducto(producto);

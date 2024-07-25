@@ -194,3 +194,5 @@ call sp_agregarUtencilio(1, 'Cuchara', 'Acero inoxidable', 'Plateado');
 call sp_agregarUtencilio(2, 'Tenedor', 'Plástico', 'Blanco');
 call sp_agregarUtencilio(3, 'Cuchillo', 'Acero', 'Negro');
 call sp_agregarUtencilio(4, 'Espátula', 'Silicona', 'Rojo');
+
+select * from producto;

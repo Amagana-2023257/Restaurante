@@ -37,6 +37,7 @@ public class ProductoService implements IProductoService{
     @Override
     public List<Producto> listarProductos() {
         TypedQuery<Producto> query = em.createQuery("SELECT p FROM Producto p", Producto.class);
+        
         return query.getResultList();
     }
 

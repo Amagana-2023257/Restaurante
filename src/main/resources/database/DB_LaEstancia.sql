@@ -1,7 +1,10 @@
 -- drop database db_laestancia;
-create database DB_LaEstancia;
-use DB_LaEstancia;
+Drop database if exists DBEjercicioClase;
+Create database if not exists DBEjercicioClase;
+Use DBEjercicioClase;
 
+
+-- 
 create table cliente(
 	nit int not null,
     nombreCliente varchar(50) not null,
@@ -211,11 +214,11 @@ call sp_agregarUtencilio(4, 'Espátula', 'Silicona', 'Rojo');
 -- ---------------------- Agregar Gerente ------------------------
 
 Delimiter $$
-	create procedure sp_agregarGerente (in codigoGerente int, in nombreGerente varchar(50), in apellidoGerente varchar(50), in correoGerente varchar(50),in numeroGerente varchar(8),in dirreccionGerente varchar(100),in estado varchar(20),in sueldo decimal(10, 2))
+	create procedure sp_agregarGerente (in codigoGerente int, in nombreGerente varchar(50), in apellidoGerente varchar(50), in correoGerente varchar(50),in numeroGerente varchar(8),in direccionGerente varchar(100),in estado varchar(20),in sueldo decimal(10, 2))
 		begin
-			insert into Utencilio (codigoGerente, nombreGerente, apellidoGerente, correoGerente, numeroGerente, dirreccionGerente, estado, sueldo)
-            values (codigoGerente, nombreGerente, apellidoGerente, correoGerente, numeroGerente, dirreccionGerente, estado, sueldo);
+			insert into Gerente (codigoGerente, nombreGerente, apellidoGerente, correoGerente, numeroGerente, direccionGerente, estado, sueldo)
+            values (codigoGerente, nombreGerente, apellidoGerente, correoGerente, numeroGerente, direccionGerente, estado, sueldo);
 	end $$
 Delimiter ;
 
-call sp_agregarGerente(1, 'Gabriel', 'Contreras', 'elgoat@gmail.com', '5841 0258', 'zona 11 de mixco Condominio FC Barcelona', 'activo', 10000.00);
+call sp_agregarGerente(1, 'Gabriel', 'Contreras', 'elgoat@gmail.com', '58410258', 'zona 11 de mixco Condominio FC Barcelona', 'activo', 10000.00);

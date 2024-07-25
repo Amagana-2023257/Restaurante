@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/proyectoto"/>
+<!--
+    Este archivo de configuración se usa para definir el contexto y los recursos en un servidor Tomcat.
+    Incluye la configuración de una fuente de datos (DataSource) que permite la conexión con una base de datos MySQL.
+-->
+<Context path="/proyectoto">
 
-<Resource
-	auth="Container"
-	driverClassName="com.mysql.cj.jdbc.Driver"
-	maxIdle="30"
-	maxTotal="100"
-	name="jdbc/DB_LaEstancia"
-	username="root"
-	password="admi"
-	type="javax.sql.DataSource"
-	url="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"
-	
-/>
+    <!--
+        Configuración de la fuente de datos (DataSource) para la base de datos MySQL.
+        Este recurso puede ser referenciado por las aplicaciones desplegadas en Tomcat.
+    -->
+    <Resource
+        auth="Container" <!-- Tipo de autenticación: `Container` significa que la autenticación es manejada por el contenedor (Tomcat). -->
+        driverClassName="com.mysql.cj.jdbc.Driver" <!-- Clase del driver JDBC utilizado para la conexión con MySQL. -->
+        maxIdle="30" <!-- Número máximo de conexiones inactivas que se mantienen en el pool. -->
+        maxTotal="100" <!-- Número máximo total de conexiones en el pool de conexiones. -->
+        name="jdbc/DB_LaEstancia" <!-- Nombre JNDI del recurso, utilizado para acceder a la fuente de datos desde la aplicación. -->
+        username="root" <!-- Nombre de usuario para la conexión con la base de datos. -->
+        password="admin" <!-- Contraseña para la conexión con la base de datos. -->
+        type="javax.sql.DataSource" <!-- Tipo de recurso que está siendo configurado (en este caso, un DataSource). -->
+        url="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6" <!-- URL de conexión a la base de datos MySQL, incluyendo el nombre de la base de datos y la zona horaria. -->
+    />
+
 </Context>

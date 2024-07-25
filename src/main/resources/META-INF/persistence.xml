@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" >
-<persistence-unit name="XDDd" transaction-type="RESOURCE_LOCAL">
-<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<! reemplazar con tus entendidas -->
- 
-        <class>com.josesanchez.protectoto.model.Gerente</class>
- <properties>
-        <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"/>
-        <property name="jakarta.persistence.jdbc.user" value="root"/>
-        <property name="jakarta.persistence.jdbc.password" value="admi"/>
-        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-        <property name="hibernate.hbm2ddl.auto" value="create"/>
-        <property name="hibernate.show_sql" value="true"/>
-        <property name="hibernate.format_sql" value="true"/>
-        <property name="jakarta.persistence.schema-generation.database.action" value="update"/>        
+<!--
+    Este archivo de configuración es para la unidad de persistencia de JPA (Java Persistence API).
+    Define cómo se conecta la aplicación con la base de datos y proporciona las configuraciones para Hibernate como proveedor de JPA.
+-->
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    
+    <!-- Definición de la unidad de persistencia -->
+    <persistence-unit name="DB_LaEstancia" transaction-type="RESOURCE_LOCAL">
+        <!-- Proveedor de JPA utilizado -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <!-- Clase que será gestionada por JPA -->
+        <class>com.josesanchez.protectoto.model.Gerente</class>
+
+        <!-- Propiedades de configuración para la unidad de persistencia -->
+        <properties>
+            <!-- Driver JDBC para la conexión con MySQL -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            
+            <!-- URL de conexión a la base de datos MySQL -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"/>
+            
+            <!-- Nombre de usuario para la conexión con la base de datos -->
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            
+            <!-- Contraseña para la conexión con la base de datos -->
+            <property name="jakarta.persistence.jdbc.password" value="admin"/>
+            
+            <!-- Dialecto de Hibernate para MySQL -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            
+            <!-- Estrategia para el esquema de la base de datos: crear el esquema al inicio -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            
+            <!-- Mostrar las consultas SQL ejecutadas en la consola -->
+            <property name="hibernate.show_sql" value="true"/>
+            
+            <!-- Formatear las consultas SQL para que sean más legibles en la consola -->
+            <property name="hibernate.format_sql" value="true"/>
+            
+            <!-- Acción de generación del esquema en la base de datos: actualizar el esquema existente -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>        
         </properties>
     </persistence-unit>
 </persistence>

@@ -29,7 +29,7 @@ y cierra con bodiFinal-->
         
         /*Este estilo es para modificar el tamaño de las tablas*/
         .custom-zice {
-            width: 700px; /*Ancho*/
+            width: 900px; /*Ancho*/
             height: 500px; /*Largo*/
             
         }
@@ -84,10 +84,14 @@ y cierra con bodiFinal-->
                                     usuario pueda identificar que dato es el que 
                                     mostrara la tabla -->
                                 <tr>
-                                    <th scope="col">ID</th>
+                                    <th scope="col">Codigo</th>
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Apellidos</th>
-                                    <th scope="col">Puesto</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Numero</th>
+                                    <th scope="col">Direccion</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Sueldo</th>
                                 </tr>
 
                         </thead>
@@ -97,37 +101,61 @@ y cierra con bodiFinal-->
                                 <td>1</td>
                                 <td>Carlos</td>
                                 <td>Martínez</td>
-                                <td>Gerente General</td>
+                                <td>cmartinez@gmail.com</td>
+                                <td>12345678</td>
+                                <td>Avenida Las Américas 123, Zona 13, Ciudad de Guatemala</td>
+                                <td>Activo</td>
+                                <td>20,000</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>María</td>
                                 <td>López</td>
-                                <td>Gerente de Cocina</td>
+                                <td>mlopez@gmail.com</td>
+                                <td>12345678</td>
+                                <td>Calle Real 456, Zona 1, Antigua Guatemala</td>
+                                <td>Activo</td>
+                                <td>21,000</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Carlos</td>
                                 <td>Martínez</td>
-                                <td>Gerente General</td>
+                                <td>cmartinez@gmail.com</td>
+                                <td>12345678</td>
+                                <td>Boulevard Los Próceres 789, Zona 10, Ciudad de Guatemala</td>
+                                <td>Inactivo</td>
+                                <td>22,000</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>María</td>
                                 <td>López</td>
-                                <td>Gerente de Cocina</td>
+                                <td>cmartinez@gmail.com</td>
+                                <td>12345678</td>
+                                <td>Avenida Reforma 101, Zona 9, Ciudad de Guatemala</td>
+                                <td>Activo</td>
+                                <td>20,000</td>
                             </tr>
                             <tr>
                                 <td>5</td>
                                 <td>Carlos</td>
                                 <td>Martínez</td>
-                                <td>Gerente General</td>
+                                <td>cmartinez@gmail.com</td>
+                                <td>12345678</td>
+                                <td>Calle del Arco 202, Zona 2, Quetzaltenango</td>
+                                <td>Inactivo</td>
+                                <td>18,000</td>
                             </tr>
                             <tr>
                                 <td>6</td>
                                 <td>María</td>
                                 <td>López</td>
-                                <td>Gerente de Cocina</td>
+                                <td>mlopez@gmail.com</td>
+                                <td>12345678</td>
+                                <td>Avenida Petapa 303, Zona 12, Ciudad de Guatemala</td>
+                                <td>Activo</td>
+                                <td>19,000</td>
                             </tr>
                         </tbody>
                     </table>

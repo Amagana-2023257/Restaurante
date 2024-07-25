@@ -1,0 +1,7 @@
+org\javierapen\webapp\servlet\OrdenServlet.class
+org\javierapen\webapp\service\IOrdenService.class
+org\javierapen\webapp\util\JpaUtil.class
+org\javierapen\webapp\model\Orden.class
+com\javierapen\laestancia\JakartaRestConfiguration.class
+com\javierapen\laestancia\resources\JakartaEE10Resource.class
+org\javierapen\webapp\service\OrdenService.class

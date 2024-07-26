@@ -29,7 +29,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Ingrese lo que sea xD</span>
-                    <input type="text" class="form-control" name="imagenProducto" aria-label="Amount (to the nearest dollar)">
+                    <input type="text" class="form-control" name="imagenProducto"">
                 </div>
                 <div>
                     <input class="btn btn-outline-success" type="submit" value="Agregar">

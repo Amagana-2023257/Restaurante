@@ -5,10 +5,11 @@
     driverClassName="com.mysql.cj.jdbc.Driver"
     maxIdle="30"
     maxTotal="100"
+    maxWaitMillis="10000" 
     name="jdbc/DB_LaEstancia"
     username="root"
     password="Samedirection14"
     type="javax.sql.DataSource"
-    url="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6"
+    url="jdbc:mysql://localhost:3306/DB_LaEstancia?serverTimezone=GMT-6" 
 />
 </Context>

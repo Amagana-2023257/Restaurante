@@ -11,7 +11,17 @@ import org.javierapen.webapp.model.Orden;
  *
  * @author 50258
  */
+
+/*
+La interfaz IOrdenService define los métodos que deben 
+ser implementados para gestionar las operaciones relacionadas 
+con la entidad Orden
+ */
 public interface IOrdenService {
-    
-        public List<Orden> listarOrden();
+
+    /*
+    Este método se utiliza para listar todas las órdenes disponibles en el sistema.
+    Devuelve una lista de objetos Orden
+     */
+    public List<Orden> listarOrden();
 }

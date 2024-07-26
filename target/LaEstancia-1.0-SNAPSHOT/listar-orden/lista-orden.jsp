@@ -84,10 +84,12 @@
                 </li>
             </ul>
         </div>
+        <!-- Utiliza las clases de Bootstrap para añadir márgenes y centrado al contenido  -->
         <div class="container mt-5">
             <table class="table">
                 <thead>
                     <tr>
+                        <!-- Define las columnas de la tabla -->
                         <th scope="col">#</th>
                         <th scope="col">Excepciones Orden</th>
                         <th scope="col">Mesa</th>
@@ -95,8 +97,9 @@
                         <th scope="col">Empleado</th>
                     </tr>
                 </thead>
-                <tbody>
-                <c:forEach var="orden" items="${orden}" >
+                <tbody
+                <!-- Itera sobre la colección de órdenes y genera una fila  para cada orden.-->
+                <c:forEach var="orden" items="${ordenes}" >
                     <tr>
                         <td>${orden.codigoOrden}</td>
                         <td>${orden.excepciones}</td>

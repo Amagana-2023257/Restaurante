@@ -15,9 +15,9 @@ create table cliente(
 create table mesa(
 	codigoMesa int not null,
     numeroAsientos int not null,
-    anchoMesa varchar(30) not null,
-    largoMesa varchar(30) not null,
-    ocupada varchar(5) not null,
+	nombreCliente varchar(100),
+    fecha varchar(50),
+    hora varchar(50),
     primary key PK_Mesa(codigoMesa)
 );
 
@@ -117,18 +117,19 @@ call sp_agregarCliente(102938476, 'Steven', 'Montenegro', 'Cayala', '20350000', 
 -- ---------------------- Mesa -------------------------------------------------
 -- ---------------------- Agregar Mesa ----------------------------------------- 
 Delimiter $$
-	create procedure sp_agregarMesa (in codigoMesa int, in numeroAsientos int, in anchoMesa varchar(50), in largoMesa varchar(50), in ocupada varchar(5))
+	create procedure sp_agregarMesa (in codigoMesa int, in numeroAsientos int, in nombreCliente varchar(100), 
+    in fecha varchar(50), in hora varchar(50))
 		begin
-			insert into Mesa (codigoMesa, numeroAsientos, anchoMesa, largoMesa, ocupada)
-            values (codigoMesa, numeroAsientos, anchoMesa, largoMesa, ocupada);
+			insert into Mesa (codigoMesa, numeroAsientos, nombreCliente, fecha, hora)
+            values (codigoMesa, numeroAsientos, nombreCliente, fecha, hora);
 	end $$
 Delimiter ;
 
-call sp_agregarMesa (3, 6, '2 mts', '3 mts', 'si');
-call sp_agregarMesa (4, 2, '1.5 mts', '2 mts', 'no');
-call sp_agregarMesa (5, 4, '2 mts', '2 mts', 'no');
-call sp_agregarMesa (6, 6, '2 mts', '1.5 mts', 'si');
-call sp_agregarMesa (7, 2, '1 mts', '1 mts', 'no');
+call sp_agregarMesa (3, 6, 'Jorge Lopez', '06-06-2023', '13:00');
+call sp_agregarMesa (4, 2, 'Luis Rodriguez', '09-09-2022', '5:00');
+call sp_agregarMesa (5, 4, 'Javier Hernandez', '01-10-2023', '6:00');
+call sp_agregarMesa (6, 6, 'Rolando Tejeda', '11-09-2023', '22:00');
+call sp_agregarMesa (7, 2, 'Jefferson Perez', '15-10-2024', '20:00');
 
 -- --------------------------- Producto ------------------------------------------
 -- ------------------------ Agregar Producto -------------------------------------

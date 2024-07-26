@@ -1,7 +1,7 @@
-package com.josesanchez.proyectoto.service;
+package com.estancia.restaurante.service;
 
-import com.josesanchez.proyectoto.model.Gerente;
-import com.josesanchez.proyectoto.util.JpaUtil;
+import com.estancia.restaurante.model.Gerente;
+import com.estancia.restaurante.util.JpaUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;

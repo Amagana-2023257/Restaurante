@@ -1,6 +1,6 @@
-package com.josesanchez.proyectoto.service;
+package com.estancia.restaurante.service;
 
-import com.josesanchez.proyectoto.model.Gerente;
+import com.estancia.restaurante.model.Gerente;
 import java.util.List;
 
 /**

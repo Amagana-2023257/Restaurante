@@ -1,4 +1,4 @@
-package com.josesanchez.proyectoto.util;
+package com.estancia.restaurante.util;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

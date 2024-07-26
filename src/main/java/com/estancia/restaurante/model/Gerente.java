@@ -1,4 +1,4 @@
-package com.josesanchez.proyectoto.model;
+package com.estancia.restaurante.model;
 
 // Importaciones necesarias de JPA (Jakarta Persistence API)
 import jakarta.persistence.Entity;

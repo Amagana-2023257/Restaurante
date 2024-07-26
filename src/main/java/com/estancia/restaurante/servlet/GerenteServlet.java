@@ -1,7 +1,7 @@
-package com.josesanchez.proyectoto.servlet;
+package com.estancia.restaurante.servlet;
 
-import com.josesanchez.proyectoto.model.Gerente;
-import com.josesanchez.proyectoto.service.GerenteService;
+import com.estancia.restaurante.model.Gerente;
+import com.estancia.restaurante.service.GerenteService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;

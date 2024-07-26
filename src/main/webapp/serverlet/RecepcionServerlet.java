@@ -31,7 +31,7 @@ public class RecepcionServerlet extends HttpServlet {
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
             List<Recepcion> recepcion = recepcionService.listarProductos();
-            recepcion.forEach(p -> System.out.println(r));
+            recepcion.forEach(p -> System.out.println(p));
             req.setAttribute("recepcion", recepcion);
             req.getRequestDispatcher("/recepcion/recepcion.jsp").forward(req, resp);
         }

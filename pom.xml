@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Este es el archivo de configuración de Maven para el proyecto.
+    Maven es una herramienta de gestión y automatización de proyectos en Java.
+    Aquí se definen las dependencias del proyecto, las propiedades, y los plugins necesarios para el proceso de construcción.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- La versión del modelo del POM (Project Object Model) que Maven utiliza -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Identificadores únicos del proyecto -->
+    <groupId>com.josesanchez</groupId> <!-- Identificador del grupo o empresa -->
+    <artifactId>proyectoto</artifactId> <!-- Nombre del artefacto (proyecto) -->
+    <version>1.0.0</version> <!-- Versión del artefacto -->
+    <packaging>war</packaging> <!-- Tipo de empaquetado del proyecto (WAR para aplicaciones web) -->
+    <name>proyectoto-1.0.0</name> <!-- Nombre del proyecto con versión -->
+
+    <!-- Propiedades del proyecto -->
+    <properties>
+        <!-- Codificación fuente utilizada en el proyecto -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+        <!-- Versión de Jakarta EE utilizada en el proyecto -->
+        <jakartaee>10.0.0</jakartaee>
+    </properties>
+
+    <!-- Dependencias necesarias para el proyecto -->
+    <dependencies>
+        <!-- Dependencia de la API de Jakarta EE -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee}</version> <!-- Se usa una propiedad para definir la versión -->
+            <scope>provided</scope> <!-- La dependencia se proporciona en el contenedor de la aplicación -->
+        </dependency>
+
+        <!-- Dependencia del núcleo de Hibernate para la persistencia de datos -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.1.0.Final</version>
+        </dependency>
+
+        <!-- Dependencia del conector MySQL para conectar con bases de datos MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+
+        <!-- Dependencia de la API de Jakarta Persistence -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!-- Dependencia para la API JSP de Jakarta -->
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- Aquí se pueden agregar más dependencias según sea necesario -->
+    </dependencies>
+
+    <!-- Configuración de construcción del proyecto -->
+    <build>
+        <plugins>
+            <!-- Plugin para la compilación del código fuente Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Versión del lenguaje Java para la compilación -->
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para empaquetar el proyecto como un archivo WAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+
+            <!-- Plugin para desplegar el proyecto en Tomcat usando Maven -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!-- URL del administrador de Tomcat para despliegues -->
+                    <url>http://localhost:8080/manager/text</url>
+                    <!-- Credenciales de acceso al administrador de Tomcat -->
+                    <username>root</username>
+                    <password>Samedirection14</password>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
